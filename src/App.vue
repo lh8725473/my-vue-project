@@ -8,16 +8,18 @@
 <script>
 import Siderbar from './components/Siderbar'
 import Main from './components/Main'
+import store from './vuex/store'
 
 export default {
   components: {
     Siderbar,
     Main
-  }
+  },
+  store
 }
 </script>
 
-<style>
+<style lang="scss">
 html {
   height: 100%;
 }

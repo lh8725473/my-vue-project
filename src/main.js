@@ -9,6 +9,7 @@ import router from './router'
 
 //引用第三方css
 import 'bootstrap/dist/css/bootstrap.css'
+import 'animate.css/animate.css'
 
 //引用各种第三方组件
 Vue.use(VueRouter)
@@ -16,7 +17,7 @@ Vue.use(VueResource)
 
 //http跨域配置
 Vue.http.headers.common['X-Requested-With'] = 'xmlhttprequest'
-Vue.http.options.xhr = {withCredentials: true}
+Vue.http.options.xhr = {credentials: true}
 
 //debug模式
 Vue.config.debug = true

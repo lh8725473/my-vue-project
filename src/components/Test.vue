@@ -18,17 +18,17 @@ export default {
   ready() {
     // GET /someUrl
     this.$http.get('http://wap.cellmyth.cn/mall/member/info').then((response) => {
-       	// success callback
-        console.log(response)
+      // success callback
+      console.log(response)
     }, (response) => {
-        console.log(response)
-        // error callback
+      console.log(response)
+      // error callback
     });
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
 
 </style>

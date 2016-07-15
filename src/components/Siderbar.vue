@@ -1,12 +1,19 @@
 <template>
   <div class="siderbar">
-  	<div><a v-link="{ path: '/test', activeClass: 'custom-active-class' }" class="item"><span class="glyphicon glyphicon-search"></span></i>Home</a></div>
+  	<div><a v-link="{ path: '/test', activeClass: 'custom-active-class' }" class="item"><span class="glyphicon glyphicon-search"></span></i>{{ alertMessage }}</a></div>
   	<div><a v-link="{ path: '/hello', activeClass: 'custom-active-class' }" class="item"><i class="icon smile"></i>{{ msg }}</a></div>
   </div>
 </template>
 
 <script>
+import { getAlertMessage } from '../vuex/store'
+
 export default {
+  vuex: {
+    getters: {
+      alertMessage: getAlertMessage
+    }
+  },
   data () {
     return {
       // note: changing this line won't causes changes

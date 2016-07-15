@@ -21,8 +21,11 @@ exports.cssLoaders = function (options) {
       }
       return loader + (options.sourceMap ? extraParamChar + 'sourceMap' : '')
     }).join('!')
-
     if (options.extract) {
+      // console.log(sourceLoader)
+      // if(loaders.length == 1 && loaders[0] == "css"){
+      //   return ExtractTextPlugin.extract('style-loader', sourceLoader)
+      // }
       return ExtractTextPlugin.extract('vue-style-loader', sourceLoader)
     } else {
       return ['vue-style-loader', sourceLoader].join('!')
@@ -52,5 +55,6 @@ exports.styleLoaders = function (options) {
       loader: loader
     })
   }
+  // console.log(output)
   return output
 }

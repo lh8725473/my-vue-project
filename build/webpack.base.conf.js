@@ -5,7 +5,8 @@ var projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: './src/main.js',
+    vendor: ['bootstrap/dist/css/bootstrap.css', 'animate.css/animate.css'],
   },
   output: {
     path: config.build.assetsRoot,

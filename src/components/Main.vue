@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <router-view></router-view>
+    <router-view transition="slide"></router-view>
   </div>
 </template>
 
@@ -19,7 +19,10 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
+
+
+
 .main {
 	position: absolute;
 	left: 200px;
@@ -27,4 +30,16 @@ export default {
 	right: 0;
 	bottom: 0px;
 }
+
+/*.slide-transition {
+  transition: transform 20s ease;
+}
+
+.slide-enter {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.slide-leave {
+  transform: translate3d(100%, 0, 0);
+}*/
 </style>
