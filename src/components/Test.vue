@@ -17,13 +17,13 @@ export default {
   },
   ready() {
     // GET /someUrl
-    this.$http.get('http://wap.cellmyth.cn/mall/member/info').then((response) => {
-      // success callback
-      console.log(response)
-    }, (response) => {
-      console.log(response)
-      // error callback
-    });
+    // this.$http.get('http://wap.cellmyth.cn/mall/member/info').then((response) => {
+    //   // success callback
+    //   console.log(response)
+    // }, (response) => {
+    //   console.log(response)
+    //   // error callback
+    // });
   }
 }
 </script>

@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <Siderbar></Siderbar>
+    <!-- <Siderbar></Siderbar> -->
     <Main></Main>
   </div>
 </template>
 
 <script>
-import Siderbar from './components/Siderbar'
 import Main from './components/Main'
 import store from './vuex/store'
 
 export default {
   components: {
-    Siderbar,
     Main
   },
   store

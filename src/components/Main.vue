@@ -1,45 +1,57 @@
 <template>
-  <div class="main">
+  
     <router-view transition="slide"></router-view>
+    <mt-tabbar :selected.sync="selected">
+      <mt-tab-item id="外卖" v-link="'/test'">
+        <img slot="icon" src="../assets/logo.png">
+        外卖
+      </mt-tab-item>
+      <mt-tab-item id="订单" v-link="'/hello'">
+        <img slot="icon" src="../assets/logo.png">
+        订单
+      </mt-tab-item>
+      <mt-tab-item id="发现" v-link="'/test'">
+        <img slot="icon" src="../assets/logo.png">
+        发现
+      </mt-tab-item>
+      <mt-tab-item id="我的" v-link="'/hello'">
+        <img slot="icon" src="../assets/logo.png">
+        我的
+      </mt-tab-item>
+    </mt-tabbar>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
+  name: 'page-tabbar',
+  data() {
     return {
-      // note: changing this line won't causes changes
-      // with hot-reload because the reloaded component
-      // preserves its current state and we are modifying
-      // its initial state.
-      msg: 'main'
+      selected: '外卖'
+    };
+  },
+  watch: {
+    '$route': function(a, b){
+      console.log(a)
+      console.log(b)
     }
   }
-}
+} 
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
+<style lang="scss">
+  .page-tabbar {
+    overflow: hidden;
+    height: 100vh;
+  }
 
+  .page-tabbar-container {
+    overflow: auto;
+  }
 
-
-.main {
-	position: absolute;
-	left: 200px;
-	top: 0;
-	right: 0;
-	bottom: 0px;
-}
-
-/*.slide-transition {
-  transition: transform 20s ease;
-}
-
-.slide-enter {
-  transform: translate3d(-100%, 0, 0);
-}
-
-.slide-leave {
-  transform: translate3d(100%, 0, 0);
-}*/
+  .page-wrap {
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 100px;
+  }
 </style>

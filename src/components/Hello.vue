@@ -8,8 +8,8 @@
     Click to toggle alert on right
     </button>
     <button class="btn btn-default btn-lg"
-    @click="changeAlertMessage(msg)">
-    Click to toggle alert on right
+    @click="goRouter()">
+    Click to goRouter
     </button>
     <alert
       :show.sync="showRight"
@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import router from '../router'
 import { alert } from 'vue-strap'
 import { getAlertMessage } from '../vuex/store'
 import { changeAlertMessage } from '../vuex/actions'
@@ -54,6 +55,10 @@ export default {
     changeShow () {
       console.log("changeShow")
       this.showRight = !this.showRight
+    },
+    goRouter () {
+      console.log('goRouter')
+      router.go("/test")
     }
   },
   components: {
